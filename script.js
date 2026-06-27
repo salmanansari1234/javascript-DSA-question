@@ -218,13 +218,52 @@
 // input : [1, 2, 3, 5] n = 5
 // output : 4
 
-function findMissing(arr, n){
-    let total = (n * (n+1))/2;
-    let sum = 0;
-    for(let i = 0; i < arr.length; i++){
-        sum += arr[i];
-    }
-    return total - sum;
+// function findMissing(arr, n){
+//     let total = (n * (n+1))/2;
+//     let sum = 0;
+//     for(let i = 0; i < arr.length; i++){
+//         sum += arr[i];
+//     }
+//     return total - sum;
+// }
+
+// console.log(findMissing([1, 2, 3, 5],5));
+
+//Q.2, find missing number in array
+
+// let arr  = [1, 2, 3, 4, 5, 7,8] n = 8;
+// output : 6;
+
+// function findMissing(arr, n){
+//     let total = (n*(n + 1))/2;
+//     let sum = 0;
+//     for(let i = 0; i < arr.length; i++){
+//         sum += arr[i];
+//     }
+//     return total - sum;
+// }
+
+// console.log(findMissing([1, 2, 3, 4, 5, 7, 8], 8));
+
+// Reverse an array without using reverse().
+// Interviewer: "Write a function that reverses
+//  an array without using 
+// the built-in reverse() method.
+//  Consider both in-place and out-of-place
+//  solutions."
+
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+let left = 0;
+let right = arr.length - 1;
+
+while (left < right) {
+    [arr[left], arr[right]] = [arr[right], arr[left]];
+    left++;
+    right--;
 }
 
-console.log(findMissing([1, 2, 3, 5],5));
+console.log(arr);
+
+
