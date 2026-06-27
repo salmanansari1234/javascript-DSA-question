@@ -266,4 +266,34 @@ while (left < right) {
 
 console.log(arr);
 
+// what is palindrome number
+
+let num = 121;
+let original = num;
+let reverse = 0;
+
+while (num > 0){
+    let lastDigit = num % 10;
+    reverse = reverse * 10 + lastDigit;
+    num = Math.floor(num / 10);
+}
+
+if (original === reverse) {
+    console.log("The number is a palindrome.");
+} else {
+    console.log("The number is not a palindrome.");
+}
+
+// GCD
+
+let a = 12;
+let b = 18;
+
+while (b !== 0){
+    let remainder = a % b;
+    a = b;
+    b = remainder;
+}
+console.log("GCD is:", a);
+
 
