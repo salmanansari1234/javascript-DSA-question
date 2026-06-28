@@ -296,4 +296,59 @@ while (b !== 0){
 }
 console.log("GCD is:", a);
 
+//Recuision
 
+function printNumber(n){
+    if(n===0){
+        return;
+    }
+    printNumber(n-1);
+    console.log(n);
+
+}
+
+printNumber(5);
+
+// 5! 5*4*3*2*1
+
+function factorial(n){
+    if(n===1){
+        return 1;;
+    }
+    return n*factorial(n-1);
+}
+console.log(factorial(5));
+
+// itrative
+
+function fcitrative(n){
+    let result = 1;
+    for (let i = 1; i<=n; i++){
+        result = result * i;
+    }
+    return result;
+}
+
+console.log(fcitrative(5));
+
+// Recursion 
+
+function fcRecursion(n){
+    if(n===1){
+        return 1;
+    }
+    return n * fcRecursion(n-1);
+}
+console.log(fcRecursion(5));
+
+// fibonacci series
+// input: n=8
+// output: 8
+
+function fibonacci(n){
+    if(n===0) return 0;
+    if(n===1) return 1;
+
+    return fibonacci(n-1) + fibonacci(n-2);
+}
+console.log(fibonacci(8));
